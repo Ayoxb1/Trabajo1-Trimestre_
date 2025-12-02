@@ -2,6 +2,36 @@ package com.mycompany.aventuragrafica;
 
 import modulos.*;
 
+ // INDICE
+
+
+// ===== VARIABLES GLOBALES ===== 7
+
+// ===== MAIN ===== 18
+
+// ===== INICIO GENERAL ===== 27
+
+// ===== INICIO DEL JUEGO ===== 58
+
+// ===== ESCENA PRINCIPAL (CIUDAD) ===== 118
+
+// ===== PLAZA CENTRAL ===== 148
+
+// ===== ALAMEDA AULLANTE ===== 215
+
+// ===== CENTRAL NUCLEAR ===== 265
+
+// ===== ESTACIÓN CENTRAL ===== 316
+
+// ===== BARRIO ANTIGUO ===== 360 
+
+// ===== MERCADO MAYORISTA ===== 407
+
+// ===== ZONA TIENDA / BAZAR ===== 435
+
+// ===== ACERTIJO 1 (SUCEC. FIBONACCI) ===== 526
+
+
 public class Aventuragrafica {
 
     // ===== VARIABLES GLOBALES =====
@@ -70,7 +100,7 @@ public class Aventuragrafica {
                 "Una hoja en el suelo",
                 "src/main/java/resources/imagenes/inicio_del_juego/imagen_perso_papel_fondo.png",
                 "Encuentras un papel misterioso tirado en el suelo.",
-                0.4,
+                0.5,
                 false
         );
     }
@@ -80,7 +110,7 @@ public class Aventuragrafica {
                 "Mirando el papel",
                 "src/main/java/resources/imagenes/inicio_del_juego/papel_jeroglificos.png",
                 "El papel contiene unos extraños jeroglíficos.",
-                0.4,
+                0.5,
                 false
         );
     }
@@ -90,7 +120,7 @@ public class Aventuragrafica {
                 "Jeroglíficos",
                 "src/main/java/resources/imagenes/inicio_del_juego/leyendo.png",
                 "Intentas descifrar el mensaje oculto.",
-                0.4,
+                0.5,
                 false
         );
     }
@@ -100,7 +130,7 @@ public class Aventuragrafica {
                 "Conversación",
                 "src/main/java/resources/imagenes/inicio_del_juego/conver_cama.png",
                 "Comentas el hallazgo con tu compañero.",
-                0.4,
+                0.5,
                 false
         );
     }
@@ -108,7 +138,7 @@ public class Aventuragrafica {
     static void capturarTiempo() {
         FuncionesGraficas.FotoyMensaje(
                 "Cuenta atrás",
-                "src/main/java/resources/imagenes/inicio_del_juego/Imagen central munclear.png",
+                "src/main/java/resources/imagenes/inicio_del_juego/Imagen central nmuclear.png",
                 "Algo importante va a ocurrir en la ciudad...",
                 0.4,
                 false
@@ -129,7 +159,7 @@ public class Aventuragrafica {
         int eleccion = FuncionesGraficas.FotoMensajeMenu(
                 "Ciudad",
                 opciones,
-                "src/main/java/resources/imagenes/escena_pirncipal_(ciudad)/ciudad_juego.png",
+                "src/main/java/resources/imagenes/escena_principal_(ciudad)/ciudad_juego.png",
                 "Te encuentras en la ciudad. ¿A dónde quieres ir?",
                 0.4,
                 false
@@ -346,7 +376,7 @@ static void escenaAlcantarilla() {
             case 3 -> {
                 FuncionesGraficas.FotoyMensaje(
                         "Andén",
-                        "src/main/java/resources/imagenes/estacion_central/estacion_central_dentro.png",
+                        "src/main/java/resources/imagenes/estacion_central/estacion central dentro.png",
                         "Te quedas observando a la gente en los andenes.",
                         0.4,
                         false
@@ -374,7 +404,9 @@ static void escenaAlcantarilla() {
                 0.4,
                 false
         );
-
+    
+    // ===== MERCADO MAYORISTA =====
+      Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio");
         switch (eleccion) {
             case 0 -> entrarBiblioteca();
             case 1 -> plazaCentral();
@@ -515,7 +547,7 @@ static void escenaAlcantarilla() {
 
         switch (eleccion) {
             case 0 -> {
-                acertijo10();
+                acertijo1();
                 colarseTienda = true;
             }
             case 1 -> { /* volver sin hacer nada */ }

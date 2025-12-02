@@ -64,7 +64,7 @@ public class Aventuragrafica {
         capturarTiempo();
         escenaPrincipal();
     }
-                                                                                                        //aoishdcbaoiucy
+                                                                                                       
     static void escena_papel_suelo() {
         FuncionesGraficas.FotoyMensaje(
                 "Una hoja en el suelo",

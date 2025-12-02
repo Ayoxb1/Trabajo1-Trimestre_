@@ -281,6 +281,7 @@ static void escenaAlcantarilla() {
                 0.4,
                 false
             );
+               AcertijoRioBosque.lanzar();   // AQUÍ se ejecuta el acertijo
         }
         case 3 -> {
             FuncionesGraficas.FotoyMensaje(
@@ -406,7 +407,7 @@ static void escenaAlcantarilla() {
         );
     
     // ===== MERCADO MAYORISTA =====
-      Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio");
+ 
         switch (eleccion) {
             case 0 -> entrarBiblioteca();
             case 1 -> plazaCentral();
@@ -438,7 +439,7 @@ static void escenaAlcantarilla() {
 
     // ===== MERCADO MAYORISTA =====
     static void mercadoMayorista() {
-
+Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp3");
         String[] opciones = {
             "1. Ir a la tienda",
             "2. Ir al bazar",

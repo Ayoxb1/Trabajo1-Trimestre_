@@ -554,7 +554,7 @@ static void escenaAlcantarilla() {
                     "Incorrecto",
                     "src/main/java/resources/imagenes/Acertijo/Despensa chino caja fuerte.png",
                     "No es el número correcto. La caja sigue cerrada.",
-                    0.4,
+                    0.5,
                     false
             );
         }

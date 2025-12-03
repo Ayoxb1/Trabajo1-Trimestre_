@@ -154,7 +154,8 @@ public class Aventuragrafica {
             "2. Ir a mercado mayorista",
             "3. Ir a barrio antiguo",
             "4. Ir a alameda aullante",
-            "5. Ir a estación central"
+            "5. Ir a estación central",
+            "6. Salir del Juego"
         };
 
         int eleccion = FuncionesGraficas.FotoMensajeMenu(
@@ -172,6 +173,7 @@ public class Aventuragrafica {
             case 2 -> barrioAntiguo();
             case 3 -> alamedaAullante();
             case 4 -> estacionCentral();
+            case 5 -> salirJuego();
             default -> escenaPrincipal();
         }
     }
@@ -186,7 +188,8 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/Ciudad.mp3");
         "3. Ir al barrio antiguo",
         "4. Ir a alameda aullante",
         "5. Ir a mercado mayorista",
-        "6. Ir a estación central"
+        "6. Ir a estación central",
+        "7. Salir del Juego"
     };
 
     int eleccion = FuncionesGraficas.FotoMensajeMenu(
@@ -228,6 +231,7 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/Ciudad.mp3");
         case 3 -> alamedaAullante();
         case 4 -> mercadoMayorista();
         case 5 -> estacionCentral();
+        case 6 -> salirJuego();
         default -> plazaCentral();
     }
 }
@@ -250,7 +254,8 @@ static void escenaAlcantarilla() {
         "1. Buscar tras el árbol",
         "2. Volver a la plaza central",
         "3. Ir hacia la izquierda",
-        "4. Ir hacia la derecha"
+        "4. Ir hacia la derecha",
+        "5. Salir del Juego"
     };
 
     int eleccion = FuncionesGraficas.FotoMensajeMenu(
@@ -292,7 +297,9 @@ static void escenaAlcantarilla() {
                 0.4,
                 false
             );
-        }
+       
+        }   
+        case 4 -> salirJuego();
         default -> alamedaAullante();
     }
 }
@@ -306,7 +313,8 @@ static void escenaAlcantarilla() {
             "1. Investigar alrededores",
             "2. Hablar con el segurata",
             "3. Volver a la estación central",
-            "4. Volver a la alameda aullante"
+            "4. Volver a la alameda aullante",
+            "5. Salir del Juego"
         };
 
         int eleccion = FuncionesGraficas.FotoMensajeMenu(
@@ -341,6 +349,7 @@ static void escenaAlcantarilla() {
             }
             case 2 -> estacionCentral();
             case 3 -> alamedaAullante();
+            case 4 -> salirJuego();
             default -> centralNuclear();
         }
     }
@@ -352,7 +361,8 @@ static void escenaAlcantarilla() {
             "1. Volver a plaza central",
             "2. Ir a mercado mayorista",
             "3. Ir a central nuclear (si tienes dinero)",
-            "4. Quedarse mirando la estación"
+            "4. Quedarse mirando la estación",
+            "5. Salir del Juego"
         };
 
         int eleccion = FuncionesGraficas.FotoMensajeMenu(
@@ -385,6 +395,7 @@ static void escenaAlcantarilla() {
                 );
                 estacionCentral();
             }
+            case 4 -> salirJuego();
             default -> estacionCentral();
         }
     }
@@ -395,7 +406,8 @@ static void escenaAlcantarilla() {
         String[] opciones = {
             "1. Entrar a la biblioteca",
             "2. Volver a la plaza central",
-            "3. Ir al callejón oscuro"
+            "3. Ir al callejón oscuro",
+            "4. Salir del Juego"
         };
 
         int eleccion = FuncionesGraficas.FotoMensajeMenu(
@@ -413,6 +425,7 @@ static void escenaAlcantarilla() {
             case 0 -> entrarBiblioteca();
             case 1 -> plazaCentral();
             case 2 -> callejonOscuro();
+            case 3 -> salirJuego();
             default -> barrioAntiguo();
         }
     }
@@ -445,7 +458,8 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp
             "1. Ir a la tienda",
             "2. Ir al bazar",
             "3. Ir a estación central",
-            "4. Ir a plaza central"
+            "4. Ir a plaza central",
+            "5. Salir del Juego"
         };
 
         int eleccion = FuncionesGraficas.FotoMensajeMenu(
@@ -462,6 +476,7 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp
             case 1 -> irALBazar();
             case 2 -> estacionCentral();
             case 3 -> plazaCentral();
+            case 4-> salirJuego();
             default -> mercadoMayorista();
         }
     }
@@ -472,7 +487,8 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp
         String[] opciones = {
             "1. Ir a la tienda",
             "2. Colarse en la parte de atrás de la tienda",
-            "3. Ir atrás"
+            "3. Ir atrás",
+            "4. Salir del Juego"
         };
     
         int eleccion = FuncionesGraficas.FotoMensajeMenu(
@@ -504,6 +520,7 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp
                 irALaTienda();
             }
             case 2 -> mercadoMayorista();
+            case 3 -> salirJuego();
             default -> irALaTienda();
         }
     }
@@ -512,7 +529,8 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp
 
         String[] opciones = {
             "1. Hablar con la dependienta",
-            "2. Volver atrás"
+            "2. Volver atrás",
+            "3. Salir del Juego"
         };
 
         int eleccion = FuncionesGraficas.FotoMensajeMenu(
@@ -527,6 +545,7 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp
         switch (eleccion) {
             case 0 -> acertijo1();
             case 1 -> mercadoMayorista();
+            case 2 -> salirJuego();
             default -> irALBazar();
         }
     }
@@ -535,7 +554,9 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp
 
         String[] opciones = {
             "1. Forzar cerradura",
-            "2. Volver atrás"
+            "2. Volver atrás",
+            "3. Salir del Juego"
+
         };
 
         int eleccion = FuncionesGraficas.FotoMensajeMenu(
@@ -553,11 +574,12 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp
                 colarseTienda = true;
             }
             case 1 -> { /* volver sin hacer nada */ }
+            case 2 -> salirJuego();
             default -> colarseTienda();
         }
     }
 
-    // ===== ACERTIJO 1 (SUCEC. FIBONACCI) =====
+    // ===== ACERTIJO 1 (SUCEC. FIBONACCI--> caja fuerte) =====
     static int acertijo1() {
 
         FuncionesGraficas.FotoyMensaje(
@@ -595,6 +617,17 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp
 
         return n;
     }
+static void salirJuego() {
+    FuncionesGraficas.warning(
+            "Salir del juego",
+            "Has decidido salir. ¡Gracias por jugar, " + nombreJug + "!"
+    );
+    System.exit(0); // Cierra la JVM y termina el juego
 }
+
+
+    
+}
+
 
 

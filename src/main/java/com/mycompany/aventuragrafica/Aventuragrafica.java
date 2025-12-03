@@ -61,7 +61,8 @@ public class Aventuragrafica {
         hablarSeñor = false;
         colarseAtras = false;
         colarseTienda = false;
-
+        FuncionesGraficas.FotoMensajeSonidoAutomatica("Comienzo del juego","src/main/java/resources/Imagenes/inicio_del_juego/VideoEntrada.gif" ,"En una ciudad, de la nada ocurrio lo inesperado" , "src/main/java/resources/Sonidos/AudioVideo.wav", 18, 0.5, 0, false);
+                
         nombreJug = FuncionesGraficas.pedirDatos("Bienvenido",
                 "¿Cuál es tu nickname?");
     }

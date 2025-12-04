@@ -145,7 +145,7 @@ static void datosPersonajes() {
     }
 
     // ===== ESCENA PRINCIPAL (CIUDAD) =====
-    static void escenaPrincipal() {
+    static void escenaPrincipal() { 
 
         String[] opciones = {
             "1. Ir a plaza central",

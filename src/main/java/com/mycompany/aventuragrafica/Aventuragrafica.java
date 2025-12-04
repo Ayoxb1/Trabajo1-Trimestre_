@@ -423,7 +423,7 @@ static void escenaAlcantarilla() {                  //HECHO
         int eleccion = FuncionesGraficas.FotoMensajeMenu(
                 "Barrio antiguo",
                 opciones,
-                "src/main/java/resources/imagenes/barrio_antiguo/Biblioteca_callejon.png",
+                "src/main/java/resources/imagenes/barrio_antiguo/biblioteca_callejon.png",
                 "Llegas al barrio antiguo de la ciudad.",
                 0.4,
                 false
@@ -648,5 +648,5 @@ static void salirJuego() {
 
 
 
-
+//ayoub me recibes
 

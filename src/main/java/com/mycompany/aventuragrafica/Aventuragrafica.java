@@ -509,7 +509,7 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp
     // ===== ZONA TIENDA / BAZAR =====
     static void irALaTienda() {
 Reproductor.reproducir("src/main/java/resources/Sonidos/TiendaCampanas.mp3");
-Reproductor.reproducirBucle("src/main/java/resources/Sonidos/BazarHablando.mp3");
+
         String[] opciones = {
             "1. Ir a la tienda",
             "2. Colarse en la parte de atrás de la tienda",
@@ -553,7 +553,7 @@ Reproductor.reproducirBucle("src/main/java/resources/Sonidos/BazarHablando.mp3")
     }
 
     static void irALBazar() {
-
+Reproductor.reproducirBucle("src/main/java/resources/Sonidos/BazarHablando.mp3");
         String[] opciones = {
             "1. Hablar con la dependienta",
             "2. Volver atrás",

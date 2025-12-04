@@ -74,7 +74,7 @@ public class Aventuragrafica {
     FuncionesGraficas.FotoyMensaje(
             "Portada",
             "src/main/java/resources/imagenes/inicio_general/PORTADA IMAGEN BUENA.png",
-            "El Profesor Python: El Misterio de la Ciudad Subterránea",
+            "El Profesor Python y El Misterio de la Alcantarilla",
             0.4,
             false
     );
@@ -105,17 +105,17 @@ static void datosPersonajes() {
     static void inicioJuego() {
         escena_papel_suelo();
         escena_mirando_papel();
-        escena_mirando_jeroglificos();
         escena_cama_conver();
-        capturarTiempo();
+
         escenaPrincipal();
     }
                                                                                                        
     static void escena_papel_suelo() {
         FuncionesGraficas.FotoyMensaje(
-                "Una hoja en el suelo",
+                "Una hoja en el suel"
+                        + "o",
                 "src/main/java/resources/imagenes/inicio_del_juego/imagen_perso_papel_fondo.png",
-                "Encuentras un papel misterioso tirado en el suelo." + nombreHombre,
+                "Un dia cualquiera "+nombreHombre+" y "+nombreMujer+" estaban dando una vuelta por la ciudad y se encontraron un papel en el suelo...",
                 0.5,
                 false
         );
@@ -126,39 +126,20 @@ static void datosPersonajes() {
         FuncionesGraficas.FotoyMensaje(
                 "Mirando el papel",
                 "src/main/java/resources/imagenes/inicio_del_juego/papel_jeroglificos.png",
-                "El papel contiene unos extraños jeroglíficos.",
+                "El papel contenía unos extraños jeroglificos en un idioma que no entendian y eso generó en\nnuestros protagonistas mucha intriga, ya que ambos desde siempre\nhan tenido un carácter muy aventurero y siempre han estado jugando a los detectives",
                 0.5,
                 false
         );
         Reproductor.parar();
     }
 
-    static void escena_mirando_jeroglificos() {
-        FuncionesGraficas.FotoyMensaje(
-                "Jeroglíficos",
-                "src/main/java/resources/imagenes/inicio_del_juego/leyendo.png",
-                "Intentas descifrar el mensaje oculto.",
-                0.5,
-                false
-        );
-    }
 
     static void escena_cama_conver() {
         FuncionesGraficas.FotoyMensaje(
                 "Conversación",
                 "src/main/java/resources/imagenes/inicio_del_juego/conver_cama.png",
-                "Comentas el hallazgo con tu compañero.",
+                "Esa misma noche " +nombreHombre+" y " +nombreMujer+ " estuvieron horas y horas hablando del tema a través de sus dispositivos móviles\ny ambos se contaron cosas que hasta ese dia lo tenian guardado bajo llave.\nAmbos llevaban tiempo escuchando ruidos en las profundidades de la ciudad y sabian que cosas extrañas estaban pasando,\ny asi...\nCOMIENZA ESTA HISTORIA" ,
                 0.5,
-                false
-        );
-    }
-
-    static void capturarTiempo() {
-        FuncionesGraficas.FotoyMensaje(
-                "Cuenta atrás",
-                "src/main/java/resources/imagenes/inicio_del_juego/Imagen central nmuclear.png",
-                "Algo importante va a ocurrir en la ciudad...",
-                0.4,
                 false
         );
     }

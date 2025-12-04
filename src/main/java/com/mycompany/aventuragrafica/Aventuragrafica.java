@@ -61,19 +61,19 @@ public class Aventuragrafica {
         hablarSeñor = false;
         colarseAtras = false;
         colarseTienda = false;
-        FuncionesGraficas.FotoMensajeSonidoAutomatica("Comienzo del juego","src/main/java/resources/Imagenes/inicio_del_juego/VideoEntrada.gif" ,"En una ciudad, de la nada ocurrio lo inesperado" , "src/main/java/resources/Sonidos/AudioVideo.wav", 18, 0.5, 0, false);
+        FuncionesGraficas.FotoMensajeSonidoAutomatica("Comienzo del juego","src/main/java/resources/Imagenes/inicio_del_juego/VideoEntrada.gif" ,"En una ciudad, de la nada ocurrio lo inesperado" , "src/main/java/resources/Sonidos/AudioVideo.wav", 15,1.1, 0, true);
                 
         nombreJug = FuncionesGraficas.pedirDatos("Bienvenido",
                 "¿Cuál es tu nickname?");
     }
 
    static void presentacionJuego() {
-    Reproductor.reproducir("src/main/java/resources/Sonidos/Layton1.mp3");
+    Reproductor.reproducirBucle("src/main/java/resources/Sonidos/Layton1.mp3");
 
     FuncionesGraficas.FotoyMensaje(
             "Portada",
             "src/main/java/resources/imagenes/inicio_general/PORTADA IMAGEN BUENA.png",
-            "Profesor Layton: Misterio de la Ciudad Subterránea",
+            "El Profesor Python: El Misterio de la Ciudad Subterránea",
             0.4,
             false
     );
@@ -107,6 +107,7 @@ public class Aventuragrafica {
     }
 
     static void escena_mirando_papel() {
+        Reproductor.reproducir("src/main/java/resources/Sonidos/Jeroglificos.mp3");
         FuncionesGraficas.FotoyMensaje(
                 "Mirando el papel",
                 "src/main/java/resources/imagenes/inicio_del_juego/papel_jeroglificos.png",
@@ -114,6 +115,7 @@ public class Aventuragrafica {
                 0.5,
                 false
         );
+        Reproductor.parar();
     }
 
     static void escena_mirando_jeroglificos() {
@@ -180,7 +182,8 @@ public class Aventuragrafica {
 
     // ===== PLAZA CENTRAL =====
    static void plazaCentral() {
-Reproductor.reproducir("src/main/java/resources/Sonidos/Ciudad.mp3");
+Reproductor.reproducirBucle("src/main/java/resources/Sonidos/Ciudad.mp3");
+
 
     String[] opciones = {
         "1. Hablar con el señor",
@@ -195,7 +198,7 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/Ciudad.mp3");
     int eleccion = FuncionesGraficas.FotoMensajeMenu(
         "Plaza Central",
         opciones,
-        "src/main/java/resources/imagenes/plaza_central/plaza_central.png",  // ruta desde donde ejecutes el jar
+        "src/main/java/resources/imagenes/plaza_central/plaza_central.png", 
         "La aventura comienza en la plaza central.\n¿Qué quieres hacer?",
         0.4,
         false
@@ -220,8 +223,11 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/Ciudad.mp3");
                     0.4,
                     false
                 );
-            }
+            } Reproductor.reproducir("src/main/java/resources/imagenes/plaza_central/HablandoConSeñor.mp3");
+              
+              Reproductor.parar();
             plazaCentral();
+
         }
         case 1 -> { // Alcantarilla
             escenaAlcantarilla();
@@ -249,7 +255,7 @@ static void escenaAlcantarilla() {
 
     // ===== ALAMEDA AULLANTE =====
    static void alamedaAullante() {
-   Reproductor.reproducir("src/main/java/resources/Sonidos/Buho.mp3");
+   Reproductor.reproducirBucle("src/main/java/resources/Sonidos/Buho.mp3",-1);
     String[] opciones = {
         "1. Buscar tras el árbol",
         "2. Volver a la plaza central",
@@ -275,8 +281,9 @@ static void escenaAlcantarilla() {
                 "Buscas tras el árbol y descubres unas huellas extrañas.",
                 0.4,
                 false
-            );
+            ); Reproductor.parar();
             alamedaAullante();
+
         }
         case 1 -> plazaCentral();
         case 2 -> {
@@ -287,6 +294,8 @@ static void escenaAlcantarilla() {
                 0.4,
                 false
             );
+            Reproductor.parar();
+            Reproductor.reproducir("src/main/java/resources/imagenes/plaza_central/ExplicandoAcertijo.mp3");
                AcertijoRioBosque.lanzar();   // AQUÍ se ejecuta el acertijo
         }
         case 3 -> {
@@ -462,6 +471,7 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp
             "5. Salir del Juego"
         };
 
+
         int eleccion = FuncionesGraficas.FotoMensajeMenu(
                 "Mercado mayorista",
                 opciones,
@@ -483,7 +493,8 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp
 
     // ===== ZONA TIENDA / BAZAR =====
     static void irALaTienda() {
-
+Reproductor.reproducir("src/main/java/resources/Sonidos/TiendaCampanas.mp3");
+Reproductor.reproducirBucle("src/main/java/resources/Sonidos/BazarHablando.mp3");
         String[] opciones = {
             "1. Ir a la tienda",
             "2. Colarse en la parte de atrás de la tienda",
@@ -523,6 +534,7 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp
             case 3 -> salirJuego();
             default -> irALaTienda();
         }
+        Reproductor.parar();
     }
 
     static void irALBazar() {
@@ -580,6 +592,7 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp
     }
 
     // ===== ACERTIJO 1 (SUCEC. FIBONACCI--> caja fuerte) =====
+ 
     static int acertijo1() {
 
         FuncionesGraficas.FotoyMensaje(
@@ -598,6 +611,7 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp
         int correcto = 8;   // pon aquí el valor real
 
         if (n == correcto) {
+            Reproductor.reproducir("src/main/java/resources/Sonidos/Fantasia.mp3");
             FuncionesGraficas.FotoyMensaje(
                     "Correcto",
                     "src/main/java/resources/imagenes/Acertijo/cofre_abierto.png",
@@ -605,6 +619,7 @@ Reproductor.reproducir("src/main/java/resources/Sonidos/MercadoMayoristaAudio.mp
                     0.4,
                     false
             );
+           
         } else {
             FuncionesGraficas.FotoyMensaje(
                     "Incorrecto",
@@ -628,6 +643,9 @@ static void salirJuego() {
 
     
 }
+
+
+
 
 
 

@@ -3,7 +3,7 @@ package com.mycompany.aventuragrafica;
 import modulos.*;
 
  // INDICE
-
+//  Alejandro eres gay si lo lees 
 
 // ===== VARIABLES GLOBALES ===== 7
 

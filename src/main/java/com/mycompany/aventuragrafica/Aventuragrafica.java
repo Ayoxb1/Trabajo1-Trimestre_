@@ -648,5 +648,5 @@ static void salirJuego() {
 
 
 
-//ayoub me recibes
+//ayoub me recibes 1231231
 

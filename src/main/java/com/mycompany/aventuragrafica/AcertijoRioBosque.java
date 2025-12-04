@@ -37,7 +37,7 @@ public class AcertijoRioBosque {
     public static void lanzar() {
 
         String[] opcionesMenu = {
-            "Salir",
+            "Salir (3)",
             "Hacer un cruce",
             "Ver reglas"
         };

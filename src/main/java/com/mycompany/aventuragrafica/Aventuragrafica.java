@@ -42,7 +42,8 @@ public class Aventuragrafica {
     static boolean hablarSeñor = false;
     static boolean colarseAtras = false;
     static boolean colarseTienda = false;
-
+    static String nombreHombre;
+    static String nombreMujer;
     static String nombreJug;
 
     // ===== MAIN =====
@@ -80,11 +81,25 @@ public class Aventuragrafica {
 }
 
 
-    static void datosPersonajes() {
-        String nombreMujer = FuncionesGraficas.pedirDatos("Personaje 1", "Nombre de la chica:");
-        String nombreHombre = FuncionesGraficas.pedirDatos("Personaje 2", "Nombre del chico:");
-        // Si luego los necesitas, guárdalos en variables globales
-    }
+   
+static void datosPersonajes() {
+    nombreMujer = FuncionesGraficas.FotoYPedirDatos(
+            "Personaje 1",
+            "src/main/java/resources/imagenes/personajes/chica.png",
+            "Nombre de la chica:",
+            1.0,
+            false
+    );
+
+    nombreHombre = FuncionesGraficas.FotoYPedirDatos(
+            "Personaje 2",
+            "src/main/java/resources/imagenes/personajes/chico.png",
+            "Nombre del chico:",
+            1.0,
+            false
+    );
+}
+
 
     // ===== INICIO DEL JUEGO =====
     static void inicioJuego() {
@@ -100,7 +115,7 @@ public class Aventuragrafica {
         FuncionesGraficas.FotoyMensaje(
                 "Una hoja en el suelo",
                 "src/main/java/resources/imagenes/inicio_del_juego/imagen_perso_papel_fondo.png",
-                "Encuentras un papel misterioso tirado en el suelo.",
+                "Encuentras un papel misterioso tirado en el suelo." + nombreHombre,
                 0.5,
                 false
         );
@@ -295,7 +310,7 @@ static void escenaAlcantarilla() {
                 false
             );
             Reproductor.parar();
-            Reproductor.reproducir("src/main/java/resources/imagenes/plaza_central/ExplicandoAcertijo.mp3");
+            Reproductor.reproducir("src/main/java/resources/sonidos/Acertijo.mp3");
                AcertijoRioBosque.lanzar();   // AQUÍ se ejecuta el acertijo
         }
         case 3 -> {

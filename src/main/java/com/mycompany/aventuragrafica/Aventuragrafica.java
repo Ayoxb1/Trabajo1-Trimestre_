@@ -145,7 +145,7 @@ static void datosPersonajes() {
     }
 
     // ===== ESCENA PRINCIPAL (CIUDAD) =====
-    static void escenaPrincipal() { 
+    static void escenaPrincipal() {
 
         String[] opciones = {
             "1. Ir a plaza central",
@@ -159,7 +159,8 @@ static void datosPersonajes() {
         int eleccion = FuncionesGraficas.FotoMensajeMenu(
                 "Ciudad",
                 opciones,
-                "src/main/java/resources/imagenes/escena_principal_(ciudad)/ciudad_juego.png",
+                "src/main/java/resources/imagenes/escena_principa"
+                        + "l_(ciudad)/ciudad_juego.png",
                 "Te encuentras en la ciudad. ¿A dónde quieres ir?",
                 0.4,
                 false
@@ -206,7 +207,7 @@ Reproductor.reproducirBucle("src/main/java/resources/Sonidos/Ciudad.mp3");
                 FuncionesGraficas.FotoyMensaje(
                     "Señor misterioso",
                     "src/main/java/resources/imagenes/plaza_central/EscenaHablandoConSeñorfuera.png",
-                    "El señor te da información importante sobre la ciudad subterránea.",
+                    "Se conoce que hace muchos años aqui habia una civilizacion escondida de la cual no queda ni rastro o eso creemos\nYo soy un pobre señor mayor y no tengo idea sobre el tema, pero cuando yo era pequeño escuche una conversacion del antiguo dueño\n de la tienda que hablaba sobre unos documentos, probad suerte en el mercado",
                     0.4,
                     false
                 );
@@ -215,7 +216,7 @@ Reproductor.reproducirBucle("src/main/java/resources/Sonidos/Ciudad.mp3");
                 FuncionesGraficas.FotoyMensaje(
                     "Señor",
                     "src/main/java/resources/imagenes/plaza_central/EscenaHablandoConSeñorfuera.png",
-                    "Ya has hablado con el señor. No tiene nada nuevo que decir.",
+                    "No tengo nada nuevo que decir hijos mios,mucha suerte en vuestro viaje",
                     0.4,
                     false
                 );

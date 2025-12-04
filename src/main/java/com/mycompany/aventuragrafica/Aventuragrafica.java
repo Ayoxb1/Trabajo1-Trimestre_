@@ -202,12 +202,12 @@ Reproductor.reproducirBucle("src/main/java/resources/Sonidos/Ciudad.mp3");
     );
 
     switch (eleccion) {
-        case 0 -> { // Hablar con el señor
+        case 0 -> { // Hablar con el señor HECHO
             if (!hablarSeñor) {
                 FuncionesGraficas.FotoyMensaje(
                     "Señor misterioso",
                     "src/main/java/resources/imagenes/plaza_central/EscenaHablandoConSeñorfuera.png",
-                    "Se conoce que hace muchos años aqui habia una civilizacion escondida de la cual no queda ni rastro o eso creemos\nYo soy un pobre señor mayor y no tengo idea sobre el tema, pero cuando yo era pequeño escuche una conversacion del antiguo dueño\n de la tienda que hablaba sobre unos documentos, probad suerte en el mercado",
+                    "Se conoce que hace muchos años aqui habia una civilizacion escondida de la cual no queda ni rastro o eso creemos\nYo soy un pobre señor mayor y no tengo idea sobre el tema, pero cuando yo era pequeño escuche una conversacion del antiguo dueño\n de la tienda que hablaba sobre unos documentos,a veces se escucha ruido aqui en una alcantarilla, probad suerte en el mercado",
                     0.4,
                     false
                 );
@@ -226,27 +226,30 @@ Reproductor.reproducirBucle("src/main/java/resources/Sonidos/Ciudad.mp3");
             plazaCentral();
 
         }
-        case 1 -> { // Alcantarilla
+        case 1 -> { // Alcantarilla HECHO
             escenaAlcantarilla();
             plazaCentral();
         }
-        case 2 -> barrioAntiguo();
-        case 3 -> alamedaAullante();
-        case 4 -> mercadoMayorista();
-        case 5 -> estacionCentral();
-        case 6 -> salirJuego();
+        case 2 -> barrioAntiguo();//HECHO
+        case 3 -> alamedaAullante();//HECHO
+        case 4 -> mercadoMayorista(); //HECHO
+        case 5 -> estacionCentral();//HECHO
+        case 6 -> salirJuego();//HECHO
         default -> plazaCentral();
     }
 }
 
-static void escenaAlcantarilla() {
+static void escenaAlcantarilla() {                  //HECHO
     FuncionesGraficas.FotoyMensaje(
         "Alcantarilla",
-        "src/main/java/resources/imagenes/plaza_central/Observando_alcantarilla_mercado_central.png",
-        "Te fijas en una extraña alcantarilla en el centro de la ciudad.",
+        "src/main/java/resources/imagenes/plaza_central/Observando_alcantarilla_mercado_central.jpg",
+        "En esta alcantarilla se escuchan ruidos a menudo, no se si será alguna pista jovenes",
         0.4,
         false
     );
+    FuncionesGraficas.FotoyMensaje("Dentro de la alcantarila","src/main/java/resources/imagenes/plaza_central/alcantarilla_principio.png", ""
+            
+            , 0.4, false);
 }
 
 
@@ -256,7 +259,7 @@ static void escenaAlcantarilla() {
     String[] opciones = {
         "1. Buscar tras el árbol",
         "2. Volver a la plaza central",
-        "3. Ir hacia la izquierda",
+        "3. Ir hacia la izquierda",//TIENES QUE HACER QUE SEA UNA DECISION ENTRE CAMINOS ES UNA ESCENA A PARTE QUE HAY QUE CREARLA LA FOTO TE LA PASO AHORA MISMO AL DRIVE Y YA DESDE DENTRO DE ESTA FUNCION O COMO SE LLAME ESO IR A DERECHA O IR A IZQUIERDA 
         "4. Ir hacia la derecha",
         "5. Salir del Juego"
     };
@@ -274,15 +277,16 @@ static void escenaAlcantarilla() {
         case 0 -> {
             FuncionesGraficas.FotoyMensaje(
                 "Tras el árbol",
-                "src/main/java/resources/imagenes/alameda_aullante/Imagen buscando detras del arbol.png",
-                "Buscas tras el árbol y descubres unas huellas extrañas.",
+                "src/main/java/resources/imagenes/alameda_aullante/buscando_detras.png",
+                "Aqui parece que hay otra especie de pista no "+nombreHombre+"?\nSi eso parece "+nombreMujer+" pero no se que puede ser, investiguemos más"
+                        + "",
                 0.4,
                 false
             ); Reproductor.parar();
             alamedaAullante();
 
         }
-        case 1 -> plazaCentral();
+        case 1 -> plazaCentral();//HECHO
         case 2 -> {
             FuncionesGraficas.FotoyMensaje(
                 "Camino izquierdo",
@@ -326,7 +330,7 @@ static void escenaAlcantarilla() {
         int eleccion = FuncionesGraficas.FotoMensajeMenu(
                 "Central nuclear",
                 opciones,
-                "src/main/java/resources/imagenes/central_nuclear/central_nuclear.png",
+                "src/main/java/resources/imagenes/central_nuclear/conversacion_guardia.png",
                 "Llegas a la central nuclear de las afueras.",
                 0.4,
                 false
